@@ -35,7 +35,7 @@ class LdapSinatra < Sinatra::Base
       json_parser = Yajl::Parser.new
       @json_body = json_parser.parse(request.body)
       return @json_body
-    else
+    end
 
     return request.POST
   end
